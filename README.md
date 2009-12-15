@@ -7,9 +7,9 @@ Two methods are provided:
 
 urls should be an array of arrays in the from:
 
-urls = [
-    ['regex', function(request, response){}]
-]
+    urls = [
+        ['regex', function(request, response){}]
+    ]
 
 <strong>router.include(urls)</strong>
 
