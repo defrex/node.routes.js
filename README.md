@@ -28,6 +28,15 @@ would be passed to the function as "img/logo.png".
 <strong>router.include(urls)</strong>
 
 urls should be in the same form as for route. This is used for nesting
-url lookups. That is all /forum/ urls go to forum.urls and so on.
+url lookups. That is all /forum/ urls go to forum.urls and so on. For example:
+
+    var router = require('./router');
+    var forumUrls = require('./forum').urls;
+    var home = require('./pages').home;
+    
+    urls = [
+        ['^/$', home],
+        ['^/forum/.*', router.include(forumUrls)]
+    ]
 
 
