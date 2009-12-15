@@ -1,4 +1,6 @@
 
+node.routes.js
+=============
 A simple url router.
 
 Two methods are provided:
@@ -8,8 +10,20 @@ Two methods are provided:
 urls should be an array of arrays in the from:
 
     urls = [
-        ['regex', function(request, response){}]
+        ['/regex', function(request, response){}]
     ]
+
+Additionally, if your regex contains capture groups, they will be passed
+as arguments after request and response to your function. For example:
+
+    urls = [
+        ['^/media/(.*)$', function(request, response, files){
+            /* serve file */
+        }]
+    ]
+
+In this case, if the url /media/img/logo.png is fetched, the argument files
+would be passed to the function as "img/logo.png".
 
 <strong>router.include(urls)</strong>
 
