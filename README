@@ -6,11 +6,11 @@ Two methods are provided:
 <strong>router.route(request, response, urls)</strong>
 
 urls should be an array of arrays in the from:
-
+<pre>
 urls = [
     ['regex', function(request, response){}]
 ]
-
+</pre>
 <strong>router.include(urls)</strong>
 
 urls should be in the same form as for route. This is used for nesting
