@@ -4,7 +4,7 @@ var parseURL = require('url').parse;
 
 var route = function(req, res, urls, passed_args){
     for (var i=0;i<urls.length;i++){
-        var args = new RegExp(urls[i][0]).exec(parseUrl(req.url).pathname);
+        var args = new RegExp(urls[i][0]).exec(parseURL(req.url).pathname);
         if (args !== null){
             args.shift();
             args.unshift(req, res);
