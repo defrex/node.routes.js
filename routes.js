@@ -11,9 +11,10 @@ var route = function(req, res, urls, passed_args){
             if (typeof passed_args == 'array')
                 args.concat(passed_args);
             urls[i][1].apply(this, args);
-            break;
+            return true;
         }
     }
+    return false;
 };
 
 var include = function(urls){
