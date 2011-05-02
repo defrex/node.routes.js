@@ -1,0 +1,11 @@
+{
+    "name": "routes",
+    "version": "0.5.0",
+    "description": "A URL router for node.js",
+    "author": "defrex",
+    "main": "routes.js",
+    "repository":{
+        "type" : "git", 
+        "url" : "git://github.com/defrex/node.routes.js.git"
+    }
+}
